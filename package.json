@@ -1,53 +1,38 @@
 {
-  "_from": "anime-scrapper",
-  "_inBundle": false,
-  "_integrity": "sha512-k3gCF9Q0ZU6aDmDVyQsSf4IkR1/ZsotxOjSAUmEkSbycpzEysXebemY61oDUq84VWqD/FBoCZ8YP9mgwIo8N1g==",
-  "_location": "/anime-scrapper",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "anime-scrapper",
-    "name": "anime-scrapper",
-    "escapedName": "anime-scrapper",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/anime-scrapper/-/anime-scrapper-1.0.0.tgz",
-  "_shasum": "529dc3d2d47980b017712fb21cf6253dd6040e65",
-  "_spec": "anime-scrapper",
-  "_where": "/home/berseker/anime-website",
-  "author": "weirdnaturally",
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.4",
-    "request": "^2.88.0",
-    "save": "^2.4.0"
-  },
-  "deprecated": false,
-  "description": "A scraper tool to get search and get all  details of any anime containing episodes , time of air, staff, charcaters and much more  also  get top voted characters and top hated haters. ",
+  "name": "animedataapi",
+  "version": "1.0.0",
+  "description": "An api for all anime details ",
+  "main": "app.js",
   "directories": {
     "lib": "lib"
   },
-  "keywords": [
-    "anime",
-    "anime-details",
-    "anime-scraper",
-    "anime-scrapper",
-    "anime-data",
-    "anime-data-scrapper"
-  ],
-  "license": "ISC",
-  "main": "index.js",
-  "name": "anime_data_api",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "2.3.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashutosh1104/AnimeDataAPI.git"
+  },
+  "keywords": [
+    "anime",
+    "anime-data",
+    "anime-data-api",
+    "anime-api"
+  ],
+  "author": "ashutosh_singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ashutosh1104/AnimeDataAPI/issues"
+  },
+  "homepage": "https://github.com/Ashutosh1104/AnimeDataAPI#readme"
 }
