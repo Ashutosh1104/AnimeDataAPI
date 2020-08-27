@@ -343,6 +343,7 @@ output:
 }
 ```
 
+7.
 ```javascript
 https://animedataapi.herokuapp.com/animeAndManga/topCharacters/20/loved
 ```
@@ -382,10 +383,10 @@ output:
        'Teenager' ],
     upvotes: 16385 } ]
 ```
+
+8.
 ```javascript
-searchbyName('bunny').then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/anime/searchbyName/bunny 
 ```
 output:
 ```
