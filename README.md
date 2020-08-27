@@ -55,14 +55,8 @@ Examples of OUTPUT:
 
 1.
 ```javascript
-getbyName('black clover').then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/anime/basicDeatils/Black Clover
 
-async function x (){
-    let x = await getbyName('black clover');
-    console.log(x);
-}
 ```
 output:
 ```
@@ -88,10 +82,9 @@ output:
      'Based on a Manga' ] }
 ```
 
+2.
 ```javascript
-getCharactersfor('black clover').then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/anime/Charactersof/black clover
 ```
 output:
 ```
