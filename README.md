@@ -25,12 +25,13 @@ naruto == `name` This function gives you all the four funtions mentioned above a
 <li> `https://animedataapi.herokuapp.com/anime/top100/10/loved :` 
 no == `no` && loved == `by` `no` refers to no of no of characters you want and by is either by == `loved` which gives top loved characters or `hated` which gives the top hated characters. chose wisely.</li>
 
+<li> `https://animedataapi.herokuapp.com/anime/searchbyName/naruto : `
+naruto == `term` refers to name or part of name of the anime you want to search for and `filter` is either you want search for anime or manga. This function gives you a list of all the anime that have the term in thier title.</li>
+
 <h3>Only for anime not for manga<h3>
 <li>`https://animedataapi.herokuapp.com/anime/seasonal/summer-2020 :`
 summer-2020 == `season` refers to whichever season you want the its given like 'fall-2018'</li>
 
-<li> `https://animedataapi.herokuapp.com/anime/searchbyName/naruto : `
-naruto == `term` refers to name or part of name of the anime you want to search for and `filter` is either you want search for anime or manga. This function gives you a list of all the anime that have the term in thier title.</li>
 </ul>
 
 
