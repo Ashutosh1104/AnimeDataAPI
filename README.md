@@ -22,18 +22,18 @@ naruto == `name` refers to name of the anime you want similar anime for and `fil
 <li>  `https://animedataapi.herokuapp.com/anime/fullDeatils/naruto :`
 naruto == `name` This function gives you all the four funtions mentioned above as a single result so once loaded your product works much faster.</li>
 
+<li> `https://animedataapi.herokuapp.com/anime/top100/10/loved :` 
+no == `no` && loved == `by` `no` refers to no of no of characters you want and by is either by == `loved` which gives top loved characters or `hated` which gives the top hated characters. chose wisely.</li>
+
 <h3>Only for anime not for manga<h3>
 <li>`https://animedataapi.herokuapp.com/anime/seasonal/summer-2020 :`
 summer-2020 == `season` refers to whichever season you want the its given like 'fall-2018'</li>
-<li>`getTopCharacters(no,'by')`: `no` refers to no of no of characters you want and by is either `loved` which gives top loved characters or `hated` which gives the top hated characters. chose wisely.</li>
 
 <li> `https://animedataapi.herokuapp.com/anime/searchbyName/naruto : `
 naruto == `term` refers to name or part of name of the anime you want to search for and `filter` is either you want search for anime or manga. This function gives you a list of all the anime that have the term in thier title.</li>
 </ul>
 
-<li> `https://animedataapi.herokuapp.com/anime/top100/10/loved :` 
-no == `no` && loved == `filter`  `filter` refers to either you want anime or manga while timing is wheter you want top anime of `all` time ,`week` or `today` .This function gives you a list of atmost 100 anime for the spicifired timing. (all, week or today) </li>
-</ul>
+
 
 <h2>Defaults</h2> 
 <li>keep almost every input lowercase</li>
