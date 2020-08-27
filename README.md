@@ -22,17 +22,25 @@ naruto == `name` refers to name of the anime you want similar anime for and `fil
 <li>  `https://animedataapi.herokuapp.com/anime/fullDeatils/naruto :`
 naruto == `name` This function gives you all the four funtions mentioned above as a single result so once loaded your product works much faster.</li>
 
-<li> `https://animedataapi.herokuapp.com/anime/top100/10/loved :` 
+<li> `https://animedataapi.herokuapp.com/animeAndManga/topCharacters/20/loved :` 
 no == `no` && loved == `by` `no` refers to no of no of characters you want and by is either by == `loved` which gives top loved characters or `hated` which gives the top hated characters. chose wisely.</li>
 
 <li> `https://animedataapi.herokuapp.com/anime/searchbyName/naruto : `
 naruto == `term` refers to name or part of name of the anime you want to search for and `filter` is either you want search for anime or manga. This function gives you a list of all the anime that have the term in thier title.</li>
+</ul>
 
 <h3>Only for anime not for manga<h3>
+<ul>
 <li>`https://animedataapi.herokuapp.com/anime/seasonal/summer-2020 :`
-summer-2020 == `season` refers to whichever season you want the its given like 'fall-2018'</li>
-
+  summer-2020 == `season` refers to whichever season you want the its given like 'fall-2018'</li>
 </ul>
+ 
+<h3>for BOTH Anime and Manga<h3>
+<ul>
+<li> `https://animedataapi.herokuapp.com/animeAndManga/topCharacters/20/loved :` 
+no == `no` && loved == `by` `no` refers to no of no of characters you want and by is either by == `loved` which gives top loved characters or `hated` which gives the top hated characters. chose wisely.</li>
+</ul>
+
 
 
 
@@ -111,10 +119,9 @@ output:
     voiceActors: { English: [Array], Japanese: [Array] } } ]
 ```
 
+3.
 ```javascript
-getStafffor('black clover').then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/anime/Staffof/black clover
 ```
 output:
 ```
@@ -151,10 +158,9 @@ output:
        '4-Koma Gekijou!!' ] } ]
 ```
 
+4.
 ```javascript
-getSimilarfor('black clover').then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/anime/Similarto/black clover
 ```
 output:
 ```
@@ -195,10 +201,9 @@ output:
    ]
 ```
 
+5.
 ```javascript
-getTop100().then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/anime/top100/10/loved
 ```
 output:
 ```
@@ -288,10 +293,9 @@ output:
        'Based on a Manga' ] } ]
 ```
 
+6
 ```javascript
-getSeasonal('fall-2018').then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/anime/seasonal/summer-2020
 ```
 output:
 ```
@@ -340,9 +344,7 @@ output:
 ```
 
 ```javascript
-getTopCharacters(15,'loved').then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/animeAndManga/topCharacters/20/loved
 ```
 output:
 ```
