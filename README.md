@@ -1,20 +1,37 @@
 Make Sure to pass full anime names to filters where names of anime are required such as cast and anime details functions 
 
-<h1>ANIME SCRAPPER</h1>
+<h1>ANIME DATA API</h1>
 
-This is one package that provides you with every bit of data you need to know about anime it scrapers anime planet and my anime list together alongside future addtions of fandom and other major anime websites to give you the data you need to build amazing tools and databses around anime.
-It has the following funtions:
+This is one API that provides you with every bit of data you need to know about anime it scrapers anime planet and my anime list together alongside future addtions of fandom and other major anime websites to give you the data you need to build amazing tools and databses around anime.
+It has the following end-points:
 
 <ul>
-<li>`getbyName('name','filter'): `name` refers to name of the anime you want details for make sure to get the correct english version of name here. and `filter` is either you want to details for anime or the manga. This function gives you the basic details including no of episodes , season when it aired along with year when it ended, an image link and much more such as genre and traits.</li>
-<li>`getCharactersfor('name','filter')`: `name` refers to name of the anime you want to charcaters for and `filter` is either you want to details for anime or the manga. This function gives you all the characters and their pictures that are in the anime whose name is passed along with who did the voice acting for them and small portfolio for the voice actor in case you want to make a hover event </li>
-<li>`getStafffor('name','filter')`: `name` refers to name of the anime you want to staff for and `filter` is either you want to details for anime or the manga. This function gives you all the staff memebers including directors , character designers, mangaka's as well as music if its on anime planet also it gives a small list of other projects that these people have worked on </li>
-<li> `getSimilarfor('name','filter')`: `name` refers to name of the anime you want similar anime for and `filter` is either you want similar anime or simialr manga. This function gives you a list of 9 similar anime or manga to given anime as rated by the community.</li>
-<li>`getallbyName('name','filter')`: This function gives you all the four funtions mentioned above as a single result so once loaded your product works much faster.</li>
+<li>`https://animedataapi.herokuapp.com/manga/basicDeatils/naruto :`
+`name` refers to name of the anime you want details for make sure to get the correct english version of name here. and `filter` is either you want to details for anime or the manga. This function gives you the basic details including no of episodes , season when it aired along with year when it ended, an image link and much more such as genre and traits.</li>
+  
+<li>`https://animedataapi.herokuapp.com/manga/Charactersof/naruto : `
+`name` refers to name of the anime you want to charcaters for and `filter` is either you want to details for anime or the manga. This function gives you all the characters and their pictures that are in the anime whose name is passed along with who did the voice acting for them and small portfolio for the voice actor in case you want to make a hover event </li>
+
+<li>`https://animedataapi.herokuapp.com/manga/Staffof/naruto :
+`name` refers to name of the anime you want to staff for and `filter` is either you want to details for anime or the manga. This function gives you all the staff memebers including directors , character designers, mangaka's as well as music if its on anime planet also it gives a small list of other projects that these people have worked on </li>
+
+<li> `https://animedataapi.herokuapp.com/manga/Similarto/naruto :
+`name` refers to name of the anime you want similar anime for and `filter` is either you want similar anime or simialr manga. This function gives you a list of 9 similar anime or manga to given anime as rated by the community.</li>
+
+<li>  `https://animedataapi.herokuapp.com/manga/fullDeatils/naruto :
+This function gives you all the four funtions mentioned above as a single result so once loaded your product works much faster.</li>
 <li>getTop100('filter',timing)`:`filter` refers to either you want anime or manga while timing is wheter you want top anime of `all` time ,`week` or `today` .This function gives you a list of atmost 100 anime for the spicifired timing. (all, week or today) </li>
-<li>`ggetSeasonal('season')`: `season` refers to whichever season you want the its given like 'fall-2018'</li>
+
+<li>`https://animedataapi.herokuapp.com/manga/seasonal/naruto :
+`season` refers to whichever season you want the its given like 'fall-2018'</li>
 <li>`getTopCharacters(no,'by')`: `no` refers to no of no of characters you want and by is either `loved` which gives top loved characters or `hated` which gives the top hated characters. chose wisely.</li>
-<li> searchbyName('term','filter')`: `term` refers to name or part of name of the anime you want to search for and `filter` is either you want search for anime or manga. This function gives you a list of all the anime that have the term in thier title.</li>
+
+<li> `https://animedataapi.herokuapp.com/manga/searchbyName/naruto : 
+`term` refers to name or part of name of the anime you want to search for and `filter` is either you want search for anime or manga. This function gives you a list of all the anime that have the term in thier title.</li>
+</ul>
+
+<li> `https://animedataapi.herokuapp.com/manga/top100/naruto : 
+`term` refers to name or part of name of the anime you want to search for and `filter` is either you want search for anime or manga. This function gives you a list of all the anime that have the term in thier title.</li>
 </ul>
 
 <h2>Defaults</h2> 
