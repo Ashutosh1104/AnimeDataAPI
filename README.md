@@ -1,25 +1,51 @@
 Make Sure to pass full anime names to filters where names of anime are required such as cast and anime details functions 
 
-<h1>ANIME SCRAPPER</h1>
+<h1>ANIME DATA API</h1>
 
-This is one package that provides you with every bit of data you need to know about anime it scrapers anime planet and my anime list together alongside future addtions of fandom and other major anime websites to give you the data you need to build amazing tools and databses around anime.
-It has the following funtions:
+This is one API that provides you with every bit of data you need to know about anime it scrapers anime planet and my anime list together alongside future addtions of fandom and other major anime websites to give you the data you need to build amazing tools and databses around anime.
+It has the following end-points:
 
+Replace <strong>anime<strong> with <strong>manga<strong> in below links to get details of manga
 <ul>
-<li>`getbyName('name','filter'): `name` refers to name of the anime you want details for make sure to get the correct english version of name here. and `filter` is either you want to details for anime or the manga. This function gives you the basic details including no of episodes , season when it aired along with year when it ended, an image link and much more such as genre and traits.</li>
-<li>`getCharactersfor('name','filter')`: `name` refers to name of the anime you want to charcaters for and `filter` is either you want to details for anime or the manga. This function gives you all the characters and their pictures that are in the anime whose name is passed along with who did the voice acting for them and small portfolio for the voice actor in case you want to make a hover event </li>
-<li>`getStafffor('name','filter')`: `name` refers to name of the anime you want to staff for and `filter` is either you want to details for anime or the manga. This function gives you all the staff memebers including directors , character designers, mangaka's as well as music if its on anime planet also it gives a small list of other projects that these people have worked on </li>
-<li> `getSimilarfor('name','filter')`: `name` refers to name of the anime you want similar anime for and `filter` is either you want similar anime or simialr manga. This function gives you a list of 9 similar anime or manga to given anime as rated by the community.</li>
-<li>`getallbyName('name','filter')`: This function gives you all the four funtions mentioned above as a single result so once loaded your product works much faster.</li>
-<li>getTop100('filter',timing)`:`filter` refers to either you want anime or manga while timing is wheter you want top anime of `all` time ,`week` or `today` .This function gives you a list of atmost 100 anime for the spicifired timing. (all, week or today) </li>
-<li>`ggetSeasonal('season')`: `season` refers to whichever season you want the its given like 'fall-2018'</li>
-<li>`getTopCharacters(no,'by')`: `no` refers to no of no of characters you want and by is either `loved` which gives top loved characters or `hated` which gives the top hated characters. chose wisely.</li>
-<li> searchbyName('term','filter')`: `term` refers to name or part of name of the anime you want to search for and `filter` is either you want search for anime or manga. This function gives you a list of all the anime that have the term in thier title.</li>
+<li>`https://animedataapi.herokuapp.com/anime/basicDeatils/naruto :`
+naruto == `name` refers to name of the anime you want details for make sure to get the correct english version of name here. and `filter` is either you want to details for anime or the manga. This function gives you the basic details including no of episodes , season when it aired along with year when it ended, an image link and much more such as genre and traits.</li>
+  
+<li>`https://animedataapi.herokuapp.com/anime/Charactersof/naruto : `
+naruto == `name` refers to name of the anime you want to charcaters for and `filter` is either you want to details for anime or the manga. This function gives you all the characters and their pictures that are in the anime whose name is passed along with who did the voice acting for them and small portfolio for the voice actor in case you want to make a hover event </li>
+
+<li>`https://animedataapi.herokuapp.com/anime/Staffof/naruto :`
+naruto == `name` refers to name of the anime you want to staff for and `filter` is either you want to details for anime or the manga. This function gives you all the staff memebers including directors , character designers, mangaka's as well as music if its on anime planet also it gives a small list of other projects that these people have worked on </li>
+
+<li> `https://animedataapi.herokuapp.com/anime/Similarto/naruto :`
+naruto == `name` refers to name of the anime you want similar anime for and `filter` is either you want similar anime or simialr manga. This function gives you a list of 9 similar anime or manga to given anime as rated by the community.</li>
+
+<li>  `https://animedataapi.herokuapp.com/anime/fullDeatils/naruto :`
+naruto == `name` This function gives you all the four funtions mentioned above as a single result so once loaded your product works much faster.</li>
+
+<li> `https://animedataapi.herokuapp.com/animeAndManga/topCharacters/20/loved :` 
+no == `no` && loved == `by` `no` refers to no of no of characters you want and by is either by == `loved` which gives top loved characters or `hated` which gives the top hated characters. chose wisely.</li>
+
+<li> `https://animedataapi.herokuapp.com/anime/searchbyName/naruto : `
+naruto == `term` refers to name or part of name of the anime you want to search for and `filter` is either you want search for anime or manga. This function gives you a list of all the anime that have the term in thier title.</li>
 </ul>
+
+<h3>Only for anime not for manga<h3>
+<ul>
+<li>`https://animedataapi.herokuapp.com/anime/seasonal/summer-2020 :`
+  summer-2020 == `season` refers to whichever season you want the its given like 'fall-2018'</li>
+</ul>
+ 
+<h3>for BOTH Anime and Manga<h3>
+<ul>
+<li> `https://animedataapi.herokuapp.com/animeAndManga/topCharacters/20/loved :` 
+no == `no` && loved == `by` `no` refers to no of no of characters you want and by is either by == `loved` which gives top loved characters or `hated` which gives the top hated characters. chose wisely.</li>
+</ul>
+
+
+
 
 <h2>Defaults</h2> 
 <li>keep almost every input lowercase</li>
-<li>deafult for filter is <b>'anime'</b></li>
 <li>deafult for timing in getTop 100 is <b>'all'</b></li>
 
 
@@ -33,17 +59,12 @@ NOTE: all outputs statemts are as follows
 }
 ```
 
-Examples: 
+Examples of OUTPUT: 
 
+1.
 ```javascript
-getbyName('black clover').then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/anime/basicDeatils/Black Clover
 
-async function x (){
-    let x = await getbyName('black clover');
-    console.log(x);
-}
 ```
 output:
 ```
@@ -69,10 +90,9 @@ output:
      'Based on a Manga' ] }
 ```
 
+2.
 ```javascript
-getCharactersfor('black clover').then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/anime/Charactersof/black clover
 ```
 output:
 ```
@@ -99,10 +119,9 @@ output:
     voiceActors: { English: [Array], Japanese: [Array] } } ]
 ```
 
+3.
 ```javascript
-getStafffor('black clover').then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/anime/Staffof/black clover
 ```
 output:
 ```
@@ -139,10 +158,9 @@ output:
        '4-Koma Gekijou!!' ] } ]
 ```
 
+4.
 ```javascript
-getSimilarfor('black clover').then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/anime/Similarto/black clover
 ```
 output:
 ```
@@ -183,10 +201,9 @@ output:
    ]
 ```
 
+5.
 ```javascript
-getTop100().then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/anime/top100/10/loved
 ```
 output:
 ```
@@ -276,10 +293,9 @@ output:
        'Based on a Manga' ] } ]
 ```
 
+6
 ```javascript
-getSeasonal('fall-2018').then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/anime/seasonal/summer-2020
 ```
 output:
 ```
@@ -327,10 +343,9 @@ output:
 }
 ```
 
+7.
 ```javascript
-getTopCharacters(15,'loved').then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/animeAndManga/topCharacters/20/loved
 ```
 output:
 ```
@@ -368,10 +383,10 @@ output:
        'Teenager' ],
     upvotes: 16385 } ]
 ```
+
+8.
 ```javascript
-searchbyName('bunny').then((result)=>{
-    console.log(result)
-})
+https://animedataapi.herokuapp.com/anime/searchbyName/bunny 
 ```
 output:
 ```
